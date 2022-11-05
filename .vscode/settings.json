@@ -6,9 +6,6 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "astro"],
   "prettier.documentSelectors": ["**/*.astro"],
-  "tailwindCSS.experimental.classRegex": [
-    ["clsx\\(([^)]*)\\)", "\"([^\"]*)\""]
-  ],
   "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
 }

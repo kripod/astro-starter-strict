@@ -1,0 +1,86 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:astro/recommended",
+    "plugin:astro/jsx-a11y-recommended",
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/strict",
+    "plugin:eslint-comments/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier",
+    "prettier/prettier"
+  ],
+  "plugins": ["simple-import-sort"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".astro"]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": true
+    }
+  },
+
+  "rules": {
+    /* Auto-sort imports and exports */
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "sort-imports": "off",
+    "import/order": "off",
+
+    /* Custom preferences */
+    "@typescript-eslint/consistent-indexed-object-style": [
+      "warn",
+      "index-signature" // Prevent ambiguity with Records & Tuples
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
+    "@typescript-eslint/method-signature-style": "warn", // Force type safety
+    "curly": ["error", "all"],
+    "func-names": ["warn", "as-needed"],
+    "import/no-default-export": "warn", // Default exports are confusing
+    "import/prefer-default-export": "off",
+    "tailwindcss/classnames-order": "off", // Enforced by Prettier
+    "tailwindcss/no-custom-classname": "off" // Avoid distractions while typing
+  },
+
+  "overrides": [
+    {
+      "files": "*.astro",
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser"
+      }
+    },
+    {
+      "files": "*.cjs",
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
+      }
+    },
+    {
+      "files": "*.config.*",
+      "rules": {
+        "import/no-default-export": "off",
+        "import/prefer-default-export": "warn"
+      }
+    },
+    {
+      "files": "*.config.*",
+      "excludedFiles": "astro.config.js",
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "optionalDependencies": false }
+        ]
+      }
+    },
+    {
+      "files": "*.d.ts",
+      "rules": {
+        "@typescript-eslint/consistent-type-definitions": "off" // Augmentation
+      }
+    }
+  ]
+}

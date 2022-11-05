@@ -1,7 +1,6 @@
 node_modules/
 dist/
 .output/
-.vercel/
 *.tsbuildinfo
 *.log*
 .env.local

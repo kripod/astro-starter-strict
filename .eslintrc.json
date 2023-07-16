@@ -9,12 +9,11 @@
     "plugin:@typescript-eslint/strict",
     "plugin:eslint-comments/recommended",
     "plugin:tailwindcss/recommended",
-    "prettier",
-    "prettier/prettier"
+    "prettier"
   ],
   "plugins": ["simple-import-sort"],
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": true,
     "extraFileExtensions": [".astro"]
   },
   "settings": {
@@ -35,11 +34,22 @@
       "warn",
       "index-signature" // Prevent ambiguity with Records & Tuples
     ],
-    "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
-    "@typescript-eslint/method-signature-style": "warn", // Force type safety
-    "curly": ["error", "all"],
+    "@typescript-eslint/consistent-type-definitions": "warn",
+    "@typescript-eslint/method-signature-style": "error", // Force type safety
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "destructuredArrayIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "@typescript-eslint/triple-slash-reference": [
+      "error",
+      { "path": "always" }
+    ],
+    "curly": "warn",
     "func-names": ["warn", "as-needed"],
-    "import/no-default-export": "warn", // Default exports are confusing
+    "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
     "tailwindcss/classnames-order": "off", // Enforced by Prettier
     "tailwindcss/no-custom-classname": "off" // Avoid distractions while typing
@@ -51,35 +61,6 @@
       "parser": "astro-eslint-parser",
       "parserOptions": {
         "parser": "@typescript-eslint/parser"
-      }
-    },
-    {
-      "files": "*.cjs",
-      "rules": {
-        "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
-      }
-    },
-    {
-      "files": "*.config.*",
-      "rules": {
-        "import/no-default-export": "off",
-        "import/prefer-default-export": "warn"
-      }
-    },
-    {
-      "files": "*.config.*",
-      "excludedFiles": "astro.config.js",
-      "rules": {
-        "import/no-extraneous-dependencies": [
-          "error",
-          { "optionalDependencies": false }
-        ]
-      }
-    },
-    {
-      "files": "*.d.ts",
-      "rules": {
-        "@typescript-eslint/consistent-type-definitions": "off" // Augmentation
       }
     }
   ]

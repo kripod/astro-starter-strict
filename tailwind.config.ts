@@ -1,7 +1,7 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
-/** @type {import("tailwindcss").Config} */
-module.exports = {
+export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   future: {
     hoverOnlyWhenSupported: true,
@@ -9,7 +9,6 @@ module.exports = {
     disableColorOpacityUtilitiesByDefault: true,
     relativeContentPathsByDefault: true,
   },
-  darkMode: "class",
   theme: {
     extend: {
       transitionTimingFunction: {
@@ -17,4 +16,4 @@ module.exports = {
       },
     },
   },
-};
+} satisfies Config;

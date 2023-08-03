@@ -7,13 +7,13 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 ## ✅ Table of contents
 
 - [Overview](#-overview)
-    - [The challenge](#the-challenge)
-    - [Screenshots](#screenshots)
-    - [Links](#links)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
 - [My process](#-my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Useful resources](#useful-resources)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 - [Author](#-author)
 
 ---
@@ -75,25 +75,25 @@ Users should be able to:
 ### What I learned
 
 - **Astro.js:**
-    - I discovered Astro.js, a powerful static site generator that allows me to build fast and modern websites using
-      components from different frameworks like React, Vue, and Svelte.
 
+  - I discovered Astro.js, a powerful static site generator that allows me to build fast and modern websites using
+    components from different frameworks like React, Vue, and Svelte.
 
 - **Tailwind CSS:**
-    - I deepened my knowledge of Tailwind CSS, a utility-first CSS framework. It simplifies rapid development by offering
-      pre-defined utility classes that can be combined to create complex designs while maintaining a clean and readable
-      codebase.
 
+  - I deepened my knowledge of Tailwind CSS, a utility-first CSS framework. It simplifies rapid development by offering
+    pre-defined utility classes that can be combined to create complex designs while maintaining a clean and readable
+    codebase.
 
 - **Flowbite:**
-    - I explored Flowbite, a comprehensive UI kit built with Tailwind CSS. It provided me with pre-designed components,
-      layouts, and styles, helping me deepen my knowledge and skills with Tailwind CSS.
 
+  - I explored Flowbite, a comprehensive UI kit built with Tailwind CSS. It provided me with pre-designed components,
+    layouts, and styles, helping me deepen my knowledge and skills with Tailwind CSS.
 
 - **React Hook Forms and Components in Astro:**
-    - I learned about React Hook Forms, a library for building forms in React, and integrated them into Astro sites. This
-      allowed me to streamline form validation, state management, and user input handling while leveraging React's
-      component-based architecture within Astro.js.
+  - I learned about React Hook Forms, a library for building forms in React, and integrated them into Astro sites. This
+    allowed me to streamline form validation, state management, and user input handling while leveraging React's
+    component-based architecture within Astro.js.
 
 ### Useful resources
 
@@ -101,13 +101,16 @@ Users should be able to:
 - [React Documentation](https://beta.reactjs.org/)
 - [React Hook Form Documentation](https://react-hook-form.com/get-started)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
-    - [Quick reference](https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference)
-    - [Customizing Screens](https://tailwindcss.com/docs/screens)
-    - [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
-    - [Default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
-    - [Default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale)
+  - [Quick reference](https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference)
+  - [Customizing Screens](https://tailwindcss.com/docs/screens)
+  - [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
+  - [Default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
+  - [Default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale)
+  - Plugins:
+    - [Typography Plugin](https://tailwindcss.com/docs/typography-plugin)
+    - [Container Queries Plugin](https://github.com/tailwindlabs/tailwindcss-container-queries)
 - [Flowbite Documentation](https://flowbite.com/docs/getting-started/introduction/)
-    - [Astro vs. Flowbite](https://flowbite.com/docs/getting-started/astro/)
+  - [Astro vs. Flowbite](https://flowbite.com/docs/getting-started/astro/)
 
 ---
 

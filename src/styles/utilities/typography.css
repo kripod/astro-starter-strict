@@ -1,0 +1,27 @@
+h1 {
+  @apply font-jost text-fluid-h1 font-medium leading-[100%];
+}
+
+h2 {
+  @apply font-jost text-fluid-h2 font-medium leading-[120%] tracking-[0.125rem];
+}
+
+h3 {
+  @apply font-jost text-fluid-h3 font-medium uppercase leading-[130%] tracking-[0.313rem];
+}
+
+p {
+  @apply font-jost text-fluid-body1 font-normal leading-[162.5%];
+}
+
+.btn {
+  @apply font-jost text-fluid-body2 font-medium uppercase leading-none tracking-[0.063rem];
+}
+
+.form-label {
+  @apply font-jost text-fluid-body2 font-medium leading-[173%] tracking-[0.063rem];
+}
+
+.form-error {
+  @apply font-jost text-fluid-small font-normal italic leading-[216%];
+}

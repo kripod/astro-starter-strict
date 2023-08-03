@@ -1,0 +1,40 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Container from "../components/container.astro";
+import { Image } from "astro:assets";
+
+import logo from "../assets/logo.svg";
+
+/*
+interface Props {
+  withoutMenu: boolean;
+}
+
+const { withoutMenu } = Astro.props;
+*/
+
+const { lang, prefix } = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+---
+
+<header>
+  <Container>Header</Container>
+</header>
+
+<style></style>
+
+<script>
+  /*
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    const scrollDistance = window.scrollY;
+
+    if (!header) return;
+
+    scrollDistance > 100
+      ? header.classList.add("sm")
+      : header.classList.remove("sm");
+  });
+  */
+</script>

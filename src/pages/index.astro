@@ -1,82 +1,81 @@
 ---
-import Card from "@/components/Card.astro";
-import BaseLayout from "@/layouts/BaseLayout.astro";
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+import BaseLayout from "../layouts/base-layout.astro";
+
+import "../styles/main.css";
 ---
 
-<BaseLayout title="Welcome to Astro.">
+<BaseLayout>
+  <Header />
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+    <h1>Heading 1 - The quick brown fox jumps over the lazy dog</h1>
+
+    <hr />
+
+    <h2>Heading 2 - The quick brown fox jumps over the lazy dog</h2>
+
+    <hr />
+
+    <h3>Heading 3 - The quick brown fox jumps over the lazy dog</h3>
+
+    <hr />
+
+    <p>
+      Body - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
+      hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel,
+      dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet
+      viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.
+      Nullam mollis. Ut justo. Suspendisse potenti.Sed egestas, ante et
+      vulputate volutpat, eros pede semper est, vitae luctus metus libero eu
+      augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id,
+      est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at
+      felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod
+      dui, eu pulvinar nun. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
+      neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula
+      sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc
+      tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
     </p>
-    <ul class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+
+    <hr />
+
+    <a href="#" class="btn"> Learn More</a>
+
+    <hr />
+
+    <label class="form-label">Empty Form</label>
+
+    <hr />
+
+    <span class="form-error">Can't be empty</span>
+
+    <hr />
+
+    <div class="flex flex-row gap-4">
+      <div class="h-[10rem] w-[10rem] border bg-peach">
+        Peach <br /> #E7816B
+      </div>
+      <div class="h-[10rem] w-[10rem] border bg-baltic text-white">
+        Baltic <br /> #1D1C1E
+      </div>
+      <div class="h-[10rem] w-[10rem] border bg-white">White <br />#FFFFFF</div>
+    </div>
+    <div class="mt-4 flex flex-row gap-4">
+      <div class="h-[10rem] w-[10rem] border bg-mona-lisa">
+        Mona Lisa <br /> #FFAD9B
+      </div>
+      <div class="h-[10rem] w-[10rem] border bg-ship-grey text-white">
+        Ship Grey <br /> #333136
+      </div>
+      <div class="h-[10rem] w-[10rem] border bg-athens-grey">
+        Athens Grey
+        <br />
+        #F1F3F5
+      </div>
+    </div>
   </main>
+  <Footer />
 </BaseLayout>
 
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
+<style></style>

@@ -1,0 +1,105 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const { lang } = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+
+interface Props {
+  title?: string;
+  author?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = t("site.title"),
+  author = t("site.author"),
+  description = t("site.description"),
+  ogImage = t("site.ogImage"),
+} = Astro.props;
+
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  import.meta.env.PUBLIC_WEBSITE,
+);
+
+const socialImageURL = new URL(
+  ogImage || t("site.ogImage"),
+  import.meta.env.PUBLIC_WEBSITE,
+).href;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content={author} />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="title" content={title} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
+
+    <title>{title}</title>
+
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link
+      rel="preload"
+      href="/fonts/jost-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/jost-medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/jost-bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/jost-italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/jost-variable-font.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/jost-variable-italic-font.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

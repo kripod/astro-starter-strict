@@ -1,0 +1,8 @@
+@import "tailwindcss/base";
+@import "base.css" layer(base);
+
+@import "tailwindcss/components";
+/*@import "components/stack-grid.css" layer(components);*/
+
+@import "tailwindcss/utilities";
+@import "utilities/typography.css" layer(utilities);

@@ -1,0 +1,11 @@
+.focus-base {
+  @apply focus-visible:rounded-2xl focus-visible:outline-none focus-visible:ring-4;
+}
+
+.focus-on-light {
+  @apply focus-base focus-visible:ring-baltic/50;
+}
+
+.focus-on-dark {
+  @apply focus-base focus-visible:ring-white/50;
+}

@@ -1,7 +1,20 @@
 {
-  "name": "astro-starter-strict",
-  "private": true,
+  "name": "designo",
   "type": "module",
+  "version": "1.0.0",
+  "description": "Award-winning custom designs and digital branding solutions.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakubjirous/designo.git"
+  },
+  "keywords": [
+    "astro",
+    "react",
+    "typescript",
+    "tailwind-css"
+  ],
+  "author": "Jakub Jirous <info@jakubjirous.dev>",
+  "license": "MIT",
   "scripts": {
     "prepare": "husky install",
     "dev": "astro dev",
@@ -20,11 +33,15 @@
   "dependencies": {
     "@astrojs/mdx": "0.19.7",
     "@astrojs/prefetch": "0.3.0",
+    "@astrojs/sitemap": "^2.0.1",
     "@astrojs/tailwind": "4.0.0",
+    "@astrojs/vercel": "^3.8.0",
+    "@tailwindcss/container-queries": "^0.1.1",
     "astro": "2.8.3",
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.16.19",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
@@ -45,7 +62,8 @@
     "prettier": "2.8.8",
     "prettier-plugin-astro": "0.10.0",
     "prettier-plugin-tailwindcss": "0.4.1",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "vite": "^4.4.8"
   },
   "packageManager": "pnpm@8.6.7",
   "nano-staged": {

@@ -1,0 +1,59 @@
+/* variable fonts */
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Jost";
+    src: url("/fonts/jost-variable-font.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    font-named-instance: "Regular";
+  }
+  @font-face {
+    font-family: "Jost";
+    src: url("/fonts/jost-variable-italic-font.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+    font-named-instance: "Italic";
+  }
+}
+
+/* static fonts */
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Jost";
+    src: url("/fonts/jost-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    font-named-instance: "Regular";
+  }
+  @font-face {
+    font-family: "Jost";
+    src: url("/fonts/jost-medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    font-named-instance: "Medium";
+  }
+  @font-face {
+    font-family: "Jost";
+    src: url("/fonts/jost-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    font-named-instance: "Bold";
+  }
+  @font-face {
+    font-family: "Jost";
+    src: url("/fonts/jost-italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    font-named-instance: "Italic";
+  }
+}
+
+html {
+  @apply scroll-smooth font-jost;
+}

@@ -1,0 +1,11 @@
+.btn-base {
+  @apply inline-flex whitespace-nowrap rounded-lg px-[1.9rem] py-[1.35rem] font-jost text-fluid-body2 font-medium uppercase leading-none tracking-[0.063rem] transition-all duration-500;
+}
+
+.btn-on-light {
+  @apply btn-base bg-peach text-white hover:bg-mona-lisa hover:text-white;
+}
+
+.btn-on-dark {
+  @apply btn-base bg-white text-ship-grey hover:bg-mona-lisa hover:text-white;
+}

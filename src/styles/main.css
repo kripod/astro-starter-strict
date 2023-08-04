@@ -1,0 +1,9 @@
+@import "tailwindcss/base";
+@import "base.css" layer(base);
+
+@import "tailwindcss/components";
+@import "components/btn.css" layer(components);
+
+@import "tailwindcss/utilities";
+@import "utilities/typography.css" layer(utilities);
+@import "utilities/focus.css" layer(utilities);

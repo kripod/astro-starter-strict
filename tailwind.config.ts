@@ -34,7 +34,7 @@ export default {
         "fluid-small": createFluidValue(11, 12),
       },
       transitionTimingFunction: {
-        DEFAULT: defaultTheme.transitionTimingFunction.out,
+        DEFAULT: defaultTheme.transitionTimingFunction["in-out"],
       },
     },
   },

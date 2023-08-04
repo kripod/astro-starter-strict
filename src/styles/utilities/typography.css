@@ -14,10 +14,6 @@ p {
   @apply font-jost text-fluid-body1 font-normal leading-[162.5%];
 }
 
-.btn {
-  @apply font-jost text-fluid-body2 font-medium uppercase leading-none tracking-[0.063rem];
-}
-
 .form-label {
   @apply font-jost text-fluid-body2 font-medium leading-[173%] tracking-[0.063rem];
 }

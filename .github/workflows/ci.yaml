@@ -1,21 +1,25 @@
 name: CI
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
-  build:
+  build-lint-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
           cache: pnpm
-      - run: pnpm install --ignore-scripts
+      - run: pnpm install
       - run: pnpm run build
       - run: pnpm run lint
       - run: pnpm run --if-present test

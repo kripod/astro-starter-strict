@@ -5,8 +5,8 @@
     "plugin:astro/jsx-a11y-recommended",
     "airbnb-base",
     "airbnb-typescript/base",
-    "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/strict",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:eslint-comments/recommended",
     "plugin:tailwindcss/recommended",
     "prettier"
@@ -36,6 +36,10 @@
     ],
     "@typescript-eslint/consistent-type-definitions": "warn",
     "@typescript-eslint/method-signature-style": "error", // Force type safety
+    "@typescript-eslint/no-empty-interface": [
+      "warn",
+      { "allowSingleExtends": true }
+    ],
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {

@@ -1,6 +1,4 @@
 {
-  "trailingComma": "all",
-  "pluginSearchDirs": false,
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   "overrides": [
     {

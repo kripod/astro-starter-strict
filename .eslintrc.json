@@ -8,6 +8,7 @@
     "plugin:@typescript-eslint/strict",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:eslint-comments/recommended",
+    "plugin:regexp/recommended",
     "plugin:tailwindcss/recommended",
     "prettier"
   ],
